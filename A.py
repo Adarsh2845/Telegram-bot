@@ -6,7 +6,7 @@ TOKEN = os.getenv('TOKEN')
 aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
 
 def send_value(value):
-    feed = aio.feeds('tgbot')
+    feed = aio.feeds('telebot')
     aio.send_data(feed.key,value)
 
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
